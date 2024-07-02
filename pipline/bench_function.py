@@ -181,7 +181,7 @@ def choice_test_A12(kwargs):
 
 def extract_label_NLI(output):
     # 使用正则表达式提取答案
-    match = re.search(r'【答案】: (\d+) <eoa>', output)
+    match = re.search(r'【答案】: (\d+) <eoe>', output)
 
     # 如果找到匹配项，则提取答案
     if match:
@@ -210,6 +210,7 @@ def test_NLI(**kwargs):
         premise = data[i]['premise']
         hypothesis = data[i]['hypothesis']
         model_output = model_api.send_request_GPT_NLI(prompt, premise, hypothesis)
+        print("\n\n\n",model_output)
         answer = extract_label_NLI(model_output)
         dict = {
             'idx': idx,
@@ -389,10 +390,10 @@ def export_distribute_json(
             choice_test_A12(kwargs)
     elif question_type in ["A3+A4", "B1"]:
         for kwargs in tqdm(kwargs_list, desc="Processing A3+A4/B1 Questions"):
-            choice_test_A34(kwargs)
+            choice_test_A34(**kwargs)
     elif question_type in ["NLI"]:
         for kwargs in tqdm(kwargs_list, desc="Processing NLI Questions"):
-            test_NLI(kwargs)
+            test_NLI(**kwargs)
     # if question_type in ["A1+A2"]:
     #     for kwargs in kwargs_list:
     #        choice_test_A12(**kwargs)
