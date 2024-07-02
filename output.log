@@ -1,0 +1,14 @@
+nohup: ignoring input
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+CUDA extension not installed.
+CUDA extension not installed.
+`low_cpu_mem_usage` was None, now set to True since model is quantized.
+/root/code/demo_project
+ start API creating
+
+model_name Qwen/Qwen1.5-7B-Chat-GPTQ-Int8
+Using device: cuda
+Tokenizer for model Qwen/Qwen1.5-7B-Chat-GPTQ-Int8 initialized successfully.
+
+
+Downloading shards:   0%|          | 0/3 [00:00<?, ?it/s]
