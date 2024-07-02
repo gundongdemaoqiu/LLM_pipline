@@ -13,7 +13,7 @@ Using device: cuda
 Tokenizer for model Qwen/Qwen1.5-7B-Chat-GPTQ-Int8 initialized successfully.
 
 
-Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00, 11.89it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 14.10it/s]
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  9.57it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 13.40it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 12.87it/s]
 Model Qwen/Qwen1.5-7B-Chat-GPTQ-Int8 initialized successfully.
 
 
@@ -25,84 +25,4 @@ question type is : NLI
  the batch size is  52
 Start to run model:
 
-Processing NLI Questions:   0%|          | 0/99 [00:00<?, ?it/s]Processing NLI Questions:   0%|          | 0/99 [00:19<?, ?it/s]
-The current num is 0
-
-
-
- 
-【答案】: 0 <eoe>
-Extracted answer: 0
-The current num is 1
-
-
-
- 
-【答案】: 0 <eoe>
-Extracted answer: 0
-The current num is 2
-
-
-
- 
-【答案】: 0 <eoe>
-Extracted answer: 0
-The current num is 3
-
-
-
- 
-【答案】: 0 <eoe>
-Extracted answer: 0
-The current num is 4
-
-
-
- 
-【答案】: 0 <eoe>
-Extracted answer: 0
-The current num is 5
-
-
-
- 
-【答案】: 0 <eoe>
-Extracted answer: 0
-The current num is 6
-
-
-
- 
-【答案】: 0 <eoe>
-Extracted answer: 0
-The current num is 7
-
-
-
- 
-【答案】: 0 <eoe>
-Extracted answer: 0
-The current num is 8
-
-
-
- 
-【答案】: 0 <eoe>
-Extracted answer: 0
-The current num is 9
-
-
-
- 
-【答案】: 0 <eoa>
-No match found
-Traceback (most recent call last):
-  File "/root/code/demo_project/pipline/choice_bench.py", line 61, in <module>
-    export_distribute_json(
-  File "/root/code/demo_project/pipline/bench_function.py", line 396, in export_distribute_json
-    test_NLI(**kwargs)
-  File "/root/code/demo_project/pipline/bench_function.py", line 214, in test_NLI
-    answer = extract_label_NLI(model_output)
-  File "/root/code/demo_project/pipline/bench_function.py", line 192, in extract_label_NLI
-    return answer
-UnboundLocalError: local variable 'answer' referenced before assignment
+Processing NLI Questions:   0%|          | 0/99 [00:00<?, ?it/s]

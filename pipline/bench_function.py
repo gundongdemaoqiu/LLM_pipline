@@ -209,8 +209,10 @@ def test_NLI(**kwargs):
         idx = data[i]['idx']
         premise = data[i]['premise']
         hypothesis = data[i]['hypothesis']
+        start_time = time.time()
         model_output = model_api.send_request_GPT_NLI(prompt, premise, hypothesis)
-        print("\n\n\n",model_output)
+        print(f"inference time is {time.time() - start_time}")
+        # print(model_output)
         answer = extract_label_NLI(model_output)
         dict = {
             'idx': idx,
