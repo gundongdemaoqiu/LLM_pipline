@@ -160,7 +160,7 @@ def choice_test_A12(kwargs):
             ans_list = question.split("\n")[1:]
             model_answer = pattern_second_check(ans_list, model_output)
         analysis_end_pos = model_output.find("【解析】") + len("【解析】")
-        analysis = model_output[analysis_end_pos:]    
+        analysis = model_output[analysis_end_pos+1:]    #“：”
         dict = {
             'index': index,
             'question': question, 
@@ -181,7 +181,7 @@ def choice_test_A12(kwargs):
 
 def extract_label_NLI(output):
     # 使用正则表达式提取答案
-    match = re.search(r'【答案】: (\d+) <eoe>', output)
+    match = re.search(r'(\d+)', output)
 
     # 如果找到匹配项，则提取答案
     if match:
@@ -212,7 +212,7 @@ def test_NLI(**kwargs):
         start_time = time.time()
         model_output = model_api.send_request_GPT_NLI(prompt, premise, hypothesis)
         print(f"inference time is {time.time() - start_time}")
-        # print(model_output)
+        print(model_output)
         answer = extract_label_NLI(model_output)
         dict = {
             'idx': idx,
@@ -246,6 +246,7 @@ def choice_test_A34(**kwargs):
 
     model_answer_dict = []
     for i in range(start_num, end_num):
+        print("the current num is",i)
         index = data[i]['index']
         question = data[i]['question']    # list() 包含多个小问题和答案
         share_content = data[i]['share_content']
@@ -253,19 +254,26 @@ def choice_test_A34(**kwargs):
 
         question_list = []
         for sub_question, output in zip(question, model_output):
+            # print( sub_question)d
+            sub_question_text = sub_question.get('sub_question', '') 
             model_answer = extract_choice_answer(output, question_type, 5)
             if question_type == 'A3+A4':
                 model_answer = A3_second_check(output)
             if len(model_answer) == 0:
                 if question_type == 'A3+A4':
-                    ans_list = sub_question.split("\n")[1:]
+                    ans_list = sub_question_text.split("\n")[1:]
                 else:
                     ans_list = share_content.split("\n")[1:]
                 model_answer = pattern_second_check(ans_list, output)
+            
+            analysis_end_pos = output.find("【解析】") + len("【解析】")
+            analysis = output[analysis_end_pos+1:]   ###  “：”
+            # print(model_answer)
+            # print("\n",analysis)
             sub_question_dict = {
-                'sub_question': sub_question['sub_question'],
+                'sub_question': sub_question_text,
                 'answer': model_answer,
-                'analysis': output
+                'analysis': analysis
             }
             question_list.append(sub_question_dict)
         # TODO: which content of temp we expect
@@ -320,7 +328,7 @@ def export_union_json(directory: str, model_name: str, keyword: str, zero_shot_p
                 output['example'] += (data['example'])
         # Save the merged data into a single JSON file
         merge_file = os.path.join(directory, f'{keyword}_predictions.json')
-        output['example'] = sorted(output['example'], key=lambda x: x['index'])
+        output['example'] = sorted(output['example'], key=lambda x: x['index'])   ###### NIL idx.  other is index
         with open(merge_file, 'w', encoding='utf-8') as f:
             json.dump(output, f, ensure_ascii=False, indent=4)
 
@@ -364,7 +372,7 @@ def export_distribute_json(
     if not os.path.exists(save_directory):
         os.makedirs(save_directory)
     
-    for idx in range(parallel_num):
+    for idx in range( parallel_num):
         start_num = idx * batch_size
         end_num = min(start_num + batch_size, example_num)
         if start_num >= example_num:

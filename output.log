@@ -13,16 +13,104 @@ Using device: cuda
 Tokenizer for model Qwen/Qwen1.5-7B-Chat-GPTQ-Int8 initialized successfully.
 
 
-Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  9.57it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 13.40it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 12.87it/s]
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00, 12.22it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 14.40it/s]
 Model Qwen/Qwen1.5-7B-Chat-GPTQ-Int8 initialized successfully.
 
 
 
  end API creating
-keyword is : test_NLI
-question type is : NLI
- the example num is  5116
- the batch size is  52
+keyword is : test_A3
+question type is : A3+A4
+ the example num is  87
+ the batch size is  1
 Start to run model:
 
-Processing NLI Questions:   0%|          | 0/99 [00:00<?, ?it/s]
+Processing A3+A4/B1 Questions:   0%|          | 0/87 [00:00<?, ?it/s]Processing A3+A4/B1 Questions:   1%|          | 1/87 [00:24<35:01, 24.44s/it]Processing A3+A4/B1 Questions:   2%|▏         | 2/87 [00:47<33:43, 23.80s/it]Processing A3+A4/B1 Questions:   3%|▎         | 3/87 [01:11<33:02, 23.60s/it]Processing A3+A4/B1 Questions:   5%|▍         | 4/87 [01:34<32:31, 23.51s/it]Processing A3+A4/B1 Questions:   6%|▌         | 5/87 [01:57<32:03, 23.46s/it]Processing A3+A4/B1 Questions:   7%|▋         | 6/87 [02:21<31:38, 23.44s/it]Processing A3+A4/B1 Questions:   8%|▊         | 7/87 [02:44<31:13, 23.42s/it]Processing A3+A4/B1 Questions:   9%|▉         | 8/87 [03:08<30:49, 23.41s/it]Processing A3+A4/B1 Questions:  10%|█         | 9/87 [03:31<30:25, 23.40s/it]Processing A3+A4/B1 Questions:  11%|█▏        | 10/87 [04:06<34:40, 27.02s/it]Processing A3+A4/B1 Questions:  13%|█▎        | 11/87 [04:41<37:21, 29.49s/it]Processing A3+A4/B1 Questions:  14%|█▍        | 12/87 [05:16<39:01, 31.22s/it]Processing A3+A4/B1 Questions:  15%|█▍        | 13/87 [05:51<39:57, 32.39s/it]Processing A3+A4/B1 Questions:  16%|█▌        | 14/87 [07:02<53:23, 43.88s/it]Processing A3+A4/B1 Questions:  17%|█▋        | 15/87 [07:37<49:30, 41.25s/it]Processing A3+A4/B1 Questions:  18%|█▊        | 16/87 [08:24<50:47, 42.92s/it]Processing A3+A4/B1 Questions:  20%|█▉        | 17/87 [09:22<55:34, 47.64s/it]Processing A3+A4/B1 Questions:  21%|██        | 18/87 [09:58<50:28, 43.89s/it]Processing A3+A4/B1 Questions:  22%|██▏       | 19/87 [10:33<46:45, 41.26s/it]Processing A3+A4/B1 Questions:  23%|██▎       | 20/87 [11:08<44:01, 39.43s/it]Processing A3+A4/B1 Questions:  24%|██▍       | 21/87 [11:31<38:05, 34.62s/it]Processing A3+A4/B1 Questions:  25%|██▌       | 22/87 [11:55<33:51, 31.26s/it]Processing A3+A4/B1 Questions:  26%|██▋       | 23/87 [12:30<34:34, 32.41s/it]Processing A3+A4/B1 Questions:  28%|██▊       | 24/87 [13:05<34:53, 33.23s/it]Processing A3+A4/B1 Questions:  29%|██▊       | 25/87 [13:40<34:54, 33.79s/it]Processing A3+A4/B1 Questions:  30%|██▉       | 26/87 [14:15<34:45, 34.19s/it]Processing A3+A4/B1 Questions:  31%|███       | 27/87 [15:26<45:03, 45.06s/it]Processing A3+A4/B1 Questions:  32%|███▏      | 28/87 [16:01<41:22, 42.07s/it]Processing A3+A4/B1 Questions:  33%|███▎      | 29/87 [16:36<38:39, 40.00s/it]Processing A3+A4/B1 Questions:  34%|███▍      | 30/87 [16:59<33:16, 35.02s/it]Processing A3+A4/B1 Questions:  36%|███▌      | 31/87 [17:34<32:42, 35.05s/it]Processing A3+A4/B1 Questions:  37%|███▋      | 32/87 [18:10<32:09, 35.08s/it]Processing A3+A4/B1 Questions:  38%|███▊      | 33/87 [18:56<34:44, 38.61s/it]Processing A3+A4/B1 Questions:  39%|███▉      | 34/87 [19:31<33:10, 37.55s/it]Processing A3+A4/B1 Questions:  40%|████      | 35/87 [20:07<31:54, 36.82s/it]Processing A3+A4/B1 Questions:  41%|████▏     | 36/87 [23:26<1:12:40, 85.50s/it]Processing A3+A4/B1 Questions:  43%|████▎     | 37/87 [24:01<58:38, 70.38s/it]  Processing A3+A4/B1 Questions:  44%|████▎     | 38/87 [24:36<48:50, 59.80s/it]Processing A3+A4/B1 Questions:  45%|████▍     | 39/87 [24:59<39:06, 48.89s/it]Processing A3+A4/B1 Questions:  46%|████▌     | 40/87 [25:34<34:54, 44.56s/it]Processing A3+A4/B1 Questions:  47%|████▋     | 41/87 [26:08<31:54, 41.62s/it]Processing A3+A4/B1 Questions:  48%|████▊     | 42/87 [26:44<29:45, 39.68s/it]Processing A3+A4/B1 Questions:  49%|████▉     | 43/87 [27:30<30:40, 41.83s/it]Processing A3+A4/B1 Questions:  51%|█████     | 44/87 [28:06<28:31, 39.81s/it]Processing A3+A4/B1 Questions:  52%|█████▏    | 45/87 [28:29<24:25, 34.89s/it]Processing A3+A4/B1 Questions:  53%|█████▎    | 46/87 [29:39<31:07, 45.54s/it]Processing A3+A4/B1 Questions:  54%|█████▍    | 47/87 [30:14<28:16, 42.41s/it]Processing A3+A4/B1 Questions:  55%|█████▌    | 48/87 [31:01<28:26, 43.75s/it]Processing A3+A4/B1 Questions:  56%|█████▋    | 49/87 [31:36<26:04, 41.16s/it]Processing A3+A4/B1 Questions:  57%|█████▋    | 50/87 [32:12<24:15, 39.34s/it]Processing A3+A4/B1 Questions:  59%|█████▊    | 51/87 [32:47<22:50, 38.07s/it]Processing A3+A4/B1 Questions:  60%|█████▉    | 52/87 [33:22<21:41, 37.19s/it]Processing A3+A4/B1 Questions:  61%|██████    | 53/87 [34:09<22:43, 40.09s/it]Processing A3+A4/B1 Questions:  62%|██████▏   | 54/87 [34:44<21:13, 38.59s/it]Processing A3+A4/B1 Questions:  63%|██████▎   | 55/87 [35:19<20:01, 37.56s/it]Processing A3+A4/B1 Questions:  64%|██████▍   | 56/87 [35:54<19:01, 36.82s/it]Processing A3+A4/B1 Questions:  66%|██████▌   | 57/87 [36:41<19:55, 39.84s/it]Processing A3+A4/B1 Questions:  67%|██████▋   | 58/87 [37:16<18:34, 38.42s/it]Processing A3+A4/B1 Questions:  68%|██████▊   | 59/87 [38:26<22:23, 47.97s/it]Processing A3+A4/B1 Questions:  69%|██████▉   | 60/87 [39:01<19:51, 44.15s/it]Processing A3+A4/B1 Questions:  70%|███████   | 61/87 [40:12<22:33, 52.07s/it]Processing A3+A4/B1 Questions:  71%|███████▏  | 62/87 [41:11<22:30, 54.01s/it]Processing A3+A4/B1 Questions:  72%|███████▏  | 63/87 [41:58<20:45, 51.90s/it]Processing A3+A4/B1 Questions:  74%|███████▎  | 64/87 [42:21<16:37, 43.37s/it]Processing A3+A4/B1 Questions:  75%|███████▍  | 65/87 [42:56<15:00, 40.92s/it]Processing A3+A4/B1 Questions:  76%|███████▌  | 66/87 [43:20<12:29, 35.68s/it]Processing A3+A4/B1 Questions:  77%|███████▋  | 67/87 [43:55<11:50, 35.54s/it]Processing A3+A4/B1 Questions:  78%|███████▊  | 68/87 [44:23<10:32, 33.31s/it]Processing A3+A4/B1 Questions:  79%|███████▉  | 69/87 [44:58<10:09, 33.88s/it]Processing A3+A4/B1 Questions:  80%|████████  | 70/87 [45:57<11:42, 41.30s/it]Processing A3+A4/B1 Questions:  82%|████████▏ | 71/87 [46:20<09:35, 35.95s/it]Processing A3+A4/B1 Questions:  83%|████████▎ | 72/87 [46:56<08:55, 35.73s/it]Processing A3+A4/B1 Questions:  84%|████████▍ | 73/87 [47:31<08:17, 35.56s/it]Processing A3+A4/B1 Questions:  85%|████████▌ | 74/87 [48:06<07:40, 35.45s/it]Processing A3+A4/B1 Questions:  86%|████████▌ | 75/87 [48:29<06:22, 31.85s/it]Processing A3+A4/B1 Questions:  87%|████████▋ | 76/87 [49:04<06:01, 32.85s/it]Processing A3+A4/B1 Questions:  89%|████████▊ | 77/87 [49:41<05:38, 33.82s/it]Processing A3+A4/B1 Questions:  90%|████████▉ | 78/87 [50:39<06:11, 41.27s/it]Processing A3+A4/B1 Questions:  91%|█████████ | 79/87 [51:14<05:15, 39.43s/it]Processing A3+A4/B1 Questions:  92%|█████████▏| 80/87 [51:50<04:27, 38.16s/it]Processing A3+A4/B1 Questions:  93%|█████████▎| 81/87 [52:25<03:43, 37.27s/it]Processing A3+A4/B1 Questions:  94%|█████████▍| 82/87 [53:00<03:03, 36.63s/it]Processing A3+A4/B1 Questions:  95%|█████████▌| 83/87 [53:35<02:24, 36.24s/it]Processing A3+A4/B1 Questions:  97%|█████████▋| 84/87 [54:10<01:47, 35.93s/it]Processing A3+A4/B1 Questions:  98%|█████████▊| 85/87 [54:46<01:11, 35.69s/it]Processing A3+A4/B1 Questions:  99%|█████████▉| 86/87 [55:56<00:46, 46.09s/it]Processing A3+A4/B1 Questions: 100%|██████████| 87/87 [57:06<00:00, 53.33s/it]Processing A3+A4/B1 Questions: 100%|██████████| 87/87 [57:06<00:00, 39.39s/it]
+the current num is 0
+the current num is 1
+the current num is 2
+the current num is 3
+the current num is 4
+the current num is 5
+the current num is 6
+the current num is 7
+the current num is 8
+the current num is 9
+the current num is 10
+the current num is 11
+the current num is 12
+the current num is 13
+the current num is 14
+the current num is 15
+the current num is 16
+the current num is 17
+the current num is 18
+the current num is 19
+the current num is 20
+the current num is 21
+the current num is 22
+the current num is 23
+the current num is 24
+the current num is 25
+the current num is 26
+the current num is 27
+the current num is 28
+the current num is 29
+the current num is 30
+the current num is 31
+the current num is 32
+the current num is 33
+the current num is 34
+the current num is 35
+the current num is 36
+the current num is 37
+the current num is 38
+the current num is 39
+the current num is 40
+the current num is 41
+the current num is 42
+the current num is 43
+the current num is 44
+the current num is 45
+the current num is 46
+the current num is 47
+the current num is 48
+the current num is 49
+the current num is 50
+the current num is 51
+the current num is 52
+the current num is 53
+the current num is 54
+the current num is 55
+the current num is 56
+the current num is 57
+the current num is 58
+the current num is 59
+the current num is 60
+the current num is 61
+the current num is 62
+the current num is 63
+the current num is 64
+the current num is 65
+the current num is 66
+the current num is 67
+the current num is 68
+the current num is 69
+the current num is 70
+the current num is 71
+the current num is 72
+the current num is 73
+the current num is 74
+the current num is 75
+the current num is 76
+the current num is 77
+the current num is 78
+the current num is 79
+the current num is 80
+the current num is 81
+the current num is 82
+the current num is 83
+the current num is 84
+the current num is 85
+the current num is 86
+Start to merge json files

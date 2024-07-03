@@ -2,6 +2,9 @@
 
 ## 环境配置
     cd ~/code/demo_project
+    pip install transformers
+    pip install optimum
+    pip install auto-gptq
     export HF_HOME=/mnt/vepfs/fs_users/lkn/huggingface
     export http_proxy=100.68.173.80:3128
     export https_proxy=100.68.173.80:3128

@@ -27,7 +27,7 @@ def parse_args():
     parser.add_argument(
         "--sys_prompt",
         type=str,
-        default='/root/code/demo_project/pipline/NLI_prompt.json',
+        default='/root/code/demo_project/pipline/A3-4_prompt.json',
         help="选择不同测试题类型的指令.",
     )
     parser.add_argument(

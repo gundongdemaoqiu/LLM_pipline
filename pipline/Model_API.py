@@ -59,45 +59,49 @@ class API():
             print('Exception:', e)
         return model_output
 
-    # 多轮会话
     def send_request_chat(self, prompt, share_content, questions, question_type="A3+A4"):
         if question_type == "A3+A4":
             question_chose = "请根据相关的知识和案例的内容，选出唯一一个正确的选项\n"
         else:
             question_chose = "请根据相关的知识，选出在共享答案中唯一一个正确的选项\n"
         zero_shot_prompt_message = {'role': 'system', 'content': prompt}
-        messages = [zero_shot_prompt_message]
-        i = 0
-        if question_type == "A3+A4":
-            messages.append({
-                'role': 'user',
-                'content': f"案例是：{share_content}"
-            })
-        else:
-            messages.append({
-                'role': 'user',
-                'content': f"{share_content}"
-            })
+        
         model_output_list = []
-        while i < len(questions):
-            sub_question = questions[i]['sub_question']
+        for i, question_item in enumerate(questions):
+            # 每次处理新的问题时重新初始化 messages
+            messages = [zero_shot_prompt_message]
+            
+            if question_type == "A3+A4":
+                messages.append({
+                    'role': 'user',
+                    'content': f"案例是：{share_content}"
+                })
+            else:
+                messages.append({
+                    'role': 'user',
+                    'content': f"{share_content}"
+                })
+
+            sub_question = question_item['sub_question']
             question = f"输入：问题是：\n问题{sub_question}{question_chose}输出：\n"
             message = {"role": "user", "content": question}
             messages.append(message)
+            
             model_output = ""
             try:
-                if 'Qwen/Qwen1.5-14B-Chat' in self.model_name:
+                if 'Qwen/Qwen1.5-7B-Chat-GPTQ-Int8' in self.model_name:
                     model_output = self.qwen15_14b_chat_api(messages)
             except Exception as e:
                 print('Exception:', e)
+            
             messages.append({
                 "role": "assistant",
                 "content": model_output
             })
+            
             model_output_list.append(model_output)
-            i += 1
+        
         return model_output_list
-
     import time
 
     def qwen15_14b_chat_api(self, messages):
