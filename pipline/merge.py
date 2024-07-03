@@ -37,6 +37,6 @@ def merge_json_files(input_dir, output_file):
 
 
 if __name__ == '__main__':
-    input_dir = "/root/code/demo_project/A_test/predictions"
+    input_dir = "/root/code/LLM_project/LLM_pipline/A_test/predictions"
     output_file = "test_predictions.json"
     merge_json_files(input_dir, output_file)
