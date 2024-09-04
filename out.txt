@@ -1,0 +1,14 @@
+{
+    "filename": "10.1002_adem.201700820.pdf",
+    "number-of-pages": 7,
+    "tables": [
+        {
+            "page": 2,
+            "title": "Table 1. The detailed aging treatment procedures.",
+            "type": "table",
+            "columns": 2,
+            "rows": 6,
+            "text": "\nCase ID\tAging treatment processing\n1\t720 $^{GLYPH<C14>}$C GLYPH<C2> 8 h/FC \u00fe 620 $^{GLYPH<C14>}$C GLYPH<C2> 8 h/AC\n2\t900 $^{GLYPH<C14>}$C GLYPH<C2> 2 h/AC \u00fe 720 $^{GLYPH<C14>}$C GLYPH<C2> 8 h/FC \u00fe 620 $^{GLYPH<C14>}$C GLYPH<C2> 8 h/AC\n3\t900 $^{GLYPH<C14>}$C GLYPH<C2> 4 h/AC \u00fe 720 $^{GLYPH<C14>}$C GLYPH<C2> 8 h/FC \u00fe 620 $^{GLYPH<C14>}$C GLYPH<C2> 8 h/AC\n4\t900 $^{GLYPH<C14>}$C GLYPH<C2> 8 h/AC \u00fe 720 $^{GLYPH<C14>}$C GLYPH<C2> 8 h/FC \u00fe 620 $^{GLYPH<C14>}$C GLYPH<C2> 8 h/AC\n5\t900 $^{GLYPH<C14>}$C GLYPH<C2> 16 h/AC \u00fe 720 $^{GLYPH<C14>}$C GLYPH<C2> 8 h/FC \u00fe 620 $^{GLYPH<C14>}$C GLYPH<C2> 8 h/AC"
+        }
+    ]
+}
